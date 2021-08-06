@@ -1,7 +1,7 @@
 <template>
   <div class="container about">
     <div class="text-center p-3">
-      <h3 class="header">Who am I?</h3>
+      <h2 class="header">Who am I?</h2>
       <p class="p-2">
         I am a passionate developer with a constant strive to dig myself deeper
         into the jungle of tech. I mostly do web development professionally and

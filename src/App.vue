@@ -3,17 +3,23 @@
     <Header />
     <GithubLink />
     <About />
+    <Experience />
+    <Footer />
   </div>
 </template>
 
 <script>
 import About from "./components/About.vue";
+import Experience from "./components/Experience.vue";
+import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import GithubLink from "./components/GithubLink.vue";
 export default {
   name: "App",
   components: {
     About,
+    Experience,
+    Footer,
     Header,
     GithubLink,
   },
