@@ -6,7 +6,7 @@
         <Timeline
           :timeline-items="timelineItems"
           :message-when-no-items="messageWhenNoItems"
-          class="pt-5"
+          class="pt-3"
         />
       </div>
     </div>
