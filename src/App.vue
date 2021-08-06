@@ -10,7 +10,7 @@
       </div>
     </div>
     <a
-      href="https://your-url"
+      href="https://github.com/FeodalherreN/markusolsson.com"
       class="github-corner"
       aria-label="View source on GitHub"
       ><svg
