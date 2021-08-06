@@ -5,6 +5,7 @@
         <div class="text-center">
           <h1 class="h1">Markus Olsson</h1>
           <h3 class="h3">Developer</h3>
+          <span></span>
         </div>
       </div>
     </div>
