@@ -25,10 +25,16 @@ export default {
       messageWhenNoItems: "No items found",
       timelineItems: [
         {
+          from: new Date(2022, 1),
+          title: "Developer at Softhouse",
+          description:
+            "I am working with as a consultant for Softhouse, currently for Skånetrafiken in Malmö.",
+        },
+        {
           from: new Date(2020, 5),
           title: "Developer at Telenor",
           description:
-            "I am working with the website telenor.se with technologies as C#, Episerver, AWS (Elastic Beanstalk, Cloudwatch), ASP.NET, Docker and Vue.",
+            "I was working with the website telenor.se with technologies as C#, Episerver, AWS (Elastic Beanstalk, Cloudwatch), ASP.NET, Docker and Vue.",
         },
         {
           from: new Date(2018, 9),
