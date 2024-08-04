@@ -4,7 +4,7 @@
       <h2 class="header">Who am I?</h2>
       <p class="p-2">
         I am a passionate developer with a constant strive to dig myself deeper
-        into the jungle of tech. I mostly do web development professionally and
+        into the jungle of tech. I mostly do web development professionally but
         I don't like to limit myself to any specific technology or side of the
         stack. On my spare time I like to hit the gym, go on afterworks and
         spend time with my friends. If I get time to spare I tend to learn

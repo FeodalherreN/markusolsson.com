@@ -28,7 +28,7 @@ export default {
           from: new Date(2022, 1),
           title: "Developer at Softhouse",
           description:
-            "I am working with as a consultant for Softhouse, currently for Skånetrafiken in Malmö.",
+            "I am working as a consultant for Softhouse, currently for Skånetrafiken in Malmö.",
         },
         {
           from: new Date(2020, 5),
