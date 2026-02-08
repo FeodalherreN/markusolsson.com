@@ -1,7 +1,172 @@
-html {
-    font-family: "Poppins", sans-serif;
+/* Global design tokens */
+:root {
+  --bg: #070A12;
+  --bg-2: #0B1020;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-2: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+
+  /* Nerdy-but-elegant accent: cyan + coral */
+  --accent: #57E2E5;
+  --accent-2: #FD5C63;
+
+  --radius-lg: 18px;
+  --radius-md: 14px;
+
+  --shadow: 0 16px 50px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  --container: 980px;
 }
 
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
 body {
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% -10%, rgba(87, 226, 229, 0.15), transparent 60%),
+              radial-gradient(900px 700px at 95% 10%, rgba(253, 92, 99, 0.14), transparent 55%),
+              radial-gradient(1100px 900px at 45% 110%, rgba(87, 226, 229, 0.10), transparent 55%),
+              linear-gradient(180deg, var(--bg), var(--bg-2));
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+::selection {
+  background: rgba(87, 226, 229, 0.25);
+}
+
+.container {
+  width: min(92vw, var(--container));
+  margin: 0 auto;
+}
+
+.page {
+  padding: 48px 0 16px;
+}
+
+.section {
+  margin: 34px 0;
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(14px);
+}
+
+.surface--hover:hover {
+  border-color: rgba(87, 226, 229, 0.24);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+  transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
+.kicker {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(87, 226, 229, 0.10);
+  border: 1px solid rgba(87, 226, 229, 0.20);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.kicker__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(87, 226, 229, 0.16);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(87, 226, 229, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.btn--primary {
+  border-color: rgba(87, 226, 229, 0.34);
+  background: linear-gradient(135deg, rgba(87, 226, 229, 0.18), rgba(253, 92, 99, 0.12));
+}
+
+.btn--ghost {
+  background: transparent;
+  box-shadow: none;
+}
+
+.muted { color: var(--muted); }
+
+/* Decorative background */
+.app { position: relative; min-height: 100vh; }
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(600px 500px at 50% 10%, black 40%, transparent 70%);
+}
+
+.bg-glow {
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.bg-glow--a {
+  left: -140px;
+  top: 120px;
+  background: rgba(87, 226, 229, 0.40);
+}
+
+.bg-glow--b {
+  right: -160px;
+  top: -120px;
+  background: rgba(253, 92, 99, 0.35);
+}
+
+/* Make bootstrap text utilities look nicer if present */
+.text-white { color: var(--text) !important; }

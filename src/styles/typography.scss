@@ -1,5 +1,51 @@
+h1, h2, h3, h4 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
 .header {
-    text-decoration: underline solid #fd5c63 5px;
-    text-underline-offset: 7px;
-    padding: 20px 20px;
+  display: inline-block;
+  font-size: clamp(22px, 2.2vw, 28px);
+  padding: 0 0 10px;
+  margin: 0 0 18px;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 88px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0.95;
+}
+
+p { margin: 0 0 12px; }
+
+code, .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 12px;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge__spark {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(253, 92, 99, 0.14);
 }

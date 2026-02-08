@@ -1,25 +1,31 @@
 <template>
-  <div class="container text-center pb-5">
-    <h2 class="header">Experience</h2>
-    <div class="row">
-      <div class="d-flex justify-content-center flex-nowrap">
-        <Timeline
-          :timeline-items="timelineItems"
-          :message-when-no-items="messageWhenNoItems"
-          class="pt-3"
-        />
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="surface experience">
+        <div class="experience__head">
+          <h2 class="header">Experience</h2>
+          <div class="muted experience__hint">
+            A quick timeline of where I’ve been building things.
+          </div>
+        </div>
+
+        <div class="experience__timeline">
+          <Timeline
+            :timeline-items="timelineItems"
+            :message-when-no-items="messageWhenNoItems"
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import Timeline from "timeline-vuejs";
+
 export default {
   name: "Experience",
-  components: {
-    Timeline,
-  },
+  components: { Timeline },
   data() {
     return {
       messageWhenNoItems: "No items found",
@@ -28,46 +34,93 @@ export default {
           from: new Date(2022, 1),
           title: "Developer at Softhouse",
           description:
-            "I am working as a consultant for Softhouse, currently for Skånetrafiken in Malmö.",
+            "Consultant at Softhouse, working as a solution architect at Skånetrafiken in Malmö. (C#, WPF, Azure, Kubernetes, Devops, Angular)",
         },
         {
           from: new Date(2020, 5),
           title: "Developer at Telenor",
           description:
-            "I was working with the website telenor.se with technologies as C#, Episerver, AWS (Elastic Beanstalk, Cloudwatch), ASP.NET, Docker and Vue.",
+            "Worked with telenor.se using C#, Episerver, AWS (Elastic Beanstalk, Cloudwatch), ASP.NET, Docker and Vue.",
         },
         {
           from: new Date(2018, 9),
           title: "CTO and consultant at Digital Spark",
           description:
-            "Me and a friend started this consultant company together, I was responsible for the technical parts of the projects we did inhouse, whilst also taking care of the employees and their knowledge development. I was consulting at Telenor at the same time.",
+            "Co-founded a consultant company. Responsible for technical delivery and knowledge development, while consulting at Telenor.",
         },
         {
           from: new Date(2016, 10),
           title: "Consultant at XLENT",
           description:
-            "Worked as a resource consultant for companies like Assembly, Kunskapsskolan, Interflora, Tunstall and Telenor. The technologies I used in these assigments was .NET, Java, Node.js, Episerver, Golang, Vue, AngularJS and SQL.",
+            "Resource consultant for Assembly, Kunskapsskolan, Interflora, Tunstall and Telenor. Tech: .NET, Java, Node.js, Episerver, Golang, Vue, AngularJS and SQL.",
         },
         {
           from: new Date(2016, 3),
           title: "Consultant at Axians",
           description:
-            "Worked with web and API development for companies in need of improved IAM solutions. Forefront identity manager was the key in these projects, which is called Microsoft identity manager now a days. We synced all the identity data of the customers different systems (phone-system, active-directory, economy systems etc) and made sure everything as up to date and correct.",
+            "Web/API development for IAM projects using Forefront Identity Manager (now Microsoft Identity Manager). Synced identity data across customer systems and kept everything consistent.",
         },
         {
           from: new Date(2015, 9),
           title: "Developer at Cloudfinder",
           description:
-            "Cloudfinder was my first real job, I got the chance to meet amazing senior collegues that taught me the base of what I know today. We created an application that would enable version handling and searching of files in the cloud (Box, Office 365, Salesforce and Google). We used technologies as Java, C#, Docker, Elastic search and MongoDB.",
+            "First real job — learned a ton from senior colleagues. Built a cloud file search/versioning product (Box, Office 365, Salesforce, Google). Tech: Java, C#, Docker, Elasticsearch and MongoDB.",
         },
         {
           from: new Date(2014, 6),
           title: "Trainee at CGI",
           description:
-            "At CGI I was working as a trainee over the summer whilst still being in school. I got to work with internal salary systems that needed some care for. We added DevExpress and used their components to build a more modern UI for the time.",
+            "Summer trainee while in school. Modernized internal salary UIs using DevExpress components.",
         },
       ],
     };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.experience {
+  padding: 22px;
+}
+
+.experience__head {
+  padding: 8px 6px 0;
+}
+
+.experience__hint {
+  margin-top: -6px;
+  font-size: 14px;
+}
+
+.experience__timeline {
+  margin-top: 18px;
+  padding: 8px 0 6px;
+}
+
+/* timeline-vuejs overrides */
+::v-deep .timeline-container {
+  background: transparent;
+}
+::v-deep .timeline-item {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+::v-deep .timeline-item:hover {
+  border-color: rgba(87, 226, 229, 0.22);
+}
+::v-deep .timeline-item-title {
+  color: rgba(255, 255, 255, 0.92);
+}
+::v-deep .timeline-item-date {
+  color: rgba(255, 255, 255, 0.58);
+}
+::v-deep .timeline-item-description {
+  color: rgba(255, 255, 255, 0.72);
+}
+::v-deep .timeline-item-dot {
+  background: linear-gradient(180deg, rgba(87, 226, 229, 1), rgba(253, 92, 99, 1));
+  box-shadow: 0 0 0 5px rgba(87, 226, 229, 0.12);
+}
+</style>

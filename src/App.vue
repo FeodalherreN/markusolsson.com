@@ -1,9 +1,18 @@
 <template>
-  <div id="app" class="app h-100">
-    <Header />
+  <div id="app" class="app">
+    <!-- Decorative background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+
     <GithubLink />
-    <About />
-    <Experience />
+    <Header />
+
+    <main class="page">
+      <About />
+      <Experience />
+    </main>
+
     <Footer />
   </div>
 </template>
@@ -14,26 +23,20 @@ import Experience from "./components/Experience.vue";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import GithubLink from "./components/GithubLink.vue";
+
 export default {
   name: "App",
-  components: {
-    About,
-    Experience,
-    Footer,
-    Header,
-    GithubLink,
-  },
+  components: { About, Experience, Footer, Header, GithubLink },
 };
 </script>
 
 <style>
+/* Kept for backwards compatibility (older components used .card) */
 .card {
-  padding: 20px 20px;
-  color: white;
-  background-color: black;
-  opacity: 0.6;
-  -moz-box-shadow: 0 0 30px black;
-  -webkit-box-shadow: 0 0 30px black;
-  box-shadow: 0 0 30px black;
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 </style>
