@@ -1,37 +1,130 @@
 <!DOCTYPE html>
-<html lang="" class="h-100">
+<html lang="en" class="h-100 no-js">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap" rel="stylesheet">
-    <title>
-        Markus Olsson
-    </title>
-</head>
+    <!-- Prevent fallback flash: mark JS as available ASAP -->
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
 
-<body class="h-100">
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-</body>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0R4S9T4NQ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    function gtag() {
+    <!-- Primary SEO -->
+    <title>Markus Olsson — Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Full-stack developer in Malmö building modern web apps with Vue, .NET and Azure — with a focus on clean UX, performance and maintainable code."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://markusolsson.com/" />
+    <meta name="theme-color" content="#0b0f19" />
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+
+    <!-- Avoid SEO fallback flashing when JS is enabled -->
+    <style>
+      .js #app .seo-fallback {
+        display: none !important;
+      }
+
+      body {
+        background: #0b0f19;
+        color: #e6e8ef;
+      }
+    </style>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Markus Olsson" />
+    <meta property="og:title" content="Markus Olsson — Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer in Malmö building modern web apps with Vue, .NET and Azure — with a focus on clean UX, performance and maintainable code."
+    />
+    <meta property="og:url" content="https://markusolsson.com/" />
+    <meta property="og:image" content="https://markusolsson.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Markus Olsson — Full-Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer in Malmö building modern web apps with Vue, .NET and Azure — with a focus on clean UX, performance and maintainable code."
+    />
+    <meta name="twitter:image" content="https://markusolsson.com/og-image.png" />
+
+    <!-- Performance / fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Markus Olsson",
+        "url": "https://markusolsson.com/",
+        "jobTitle": "Full-Stack Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Malmö",
+          "addressCountry": "SE"
+        },
+        "sameAs": [
+          "https://github.com/FeodalherreN",
+          "https://www.linkedin.com/in/markus-olsson-81a5a545/"
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0R4S9T4NQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
         dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      }
+      gtag("js", new Date());
+      gtag("config", "G-L0R4S9T4NQ");
+    </script>
+  </head>
 
-    gtag('config', 'G-L0R4S9T4NQ');
-</script>
+  <body class="h-100">
+    <noscript>
+      <strong>This site works best with JavaScript enabled.</strong>
+    </noscript>
 
+    <div id="app">
+      <main
+        class="seo-fallback"
+        style="padding:24px;max-width:960px;margin:0 auto;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;"
+      >
+        <h1 style="margin:0 0 12px 0;">Markus Olsson</h1>
+        <p style="margin:0 0 16px 0;opacity:.85;">
+          Full-stack developer in Malmö. I build web apps with Vue, .NET and Azure, with a focus on clean UX, performance
+          and maintainable code.
+        </p>
+        <p style="margin:0;opacity:.75;">
+          JavaScript is required to view the interactive portfolio.
+        </p>
+      </main>
+    </div>
+  </body>
 </html>

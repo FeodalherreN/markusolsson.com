@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://markusolsson.com/sitemap.xml
